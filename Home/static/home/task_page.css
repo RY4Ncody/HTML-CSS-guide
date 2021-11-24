@@ -1,0 +1,23 @@
+
+.task-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 5px 7px rgb(94, 94, 94);
+    padding: 2rem;
+}
+.task-wrapper h2{
+    margin-bottom: 17px;
+    color: #c333ff;
+}
+.task-wrapper li{
+    padding: 5px;
+    font-style: italic;
+}
+.task-wrapper .pratice{
+    color: #c333ff;
+    font-weight: 600;
+}

@@ -1,0 +1,95 @@
+
+.days span a{
+    text-decoration: none;
+    color: #c333ff;
+    font-weight: 600;
+}
+.calendar{
+    padding: 20px;
+    box-shadow: 0 0 12px #ccc;
+    border-radius: 10px;
+    margin: 5rem 0 1rem 0;
+    position: absolute;
+    top: 2%;
+}
+.month-week{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.month-week span{
+    font-size: 13px;
+    margin-left: 5px;
+    background-color: #c333ff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.month-week span:last-child{
+    background-color: transparent;
+    color: #c333ff;
+    border: 1px solid #c333ff;
+}
+.weeks{
+    margin-bottom: 20px;
+}
+.weeks span{
+    padding: 20px;
+    color: #c333ff;
+}
+.days{
+    display: flex;
+}
+.days span{
+    width: 14.28%;
+    text-align: center;
+    padding: 30px 20px;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+}
+.days span:not(.next-month):before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #c333ff;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: .3s;
+}
+
+.days span:not(.next-month):hover,
+.days span a:not(.next-month):hover{
+    color: white;
+    
+}
+.days span:not(.next-month):hover::before,
+.days span a:not(.next-month):hover::before{
+    opacity: 1;
+}
+.next-month{
+    color: #ccc !important;
+    cursor: not-allowed !important;
+}
+.list{
+    position: absolute;
+    left: 5%;
+}
+.list h3{
+    margin-bottom: 10px;
+}
+.list li{
+    padding: 5px;
+}
+.list span{
+    color: #c333ff;
+    font-weight: 600;
+}

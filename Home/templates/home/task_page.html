@@ -1,0 +1,15 @@
+{% extends 'home/base.html' %}
+{% load static %}
+{% block css %} <link rel="stylesheet" href='{% static 'home/task_page.css' %}'> {% endblock css %}  
+{% block content %}
+
+<div class="task-wrapper">
+<h2>Learn at Dec {{no}}</h2>
+<ul>
+{{task|safe}}
+<li class="pratice">Practice yourself</li>
+</ul>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,97 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block css %}<link rel="stylesheet" href=' {% static 'home/home.css' %} '>{% endblock css %}
+
+{% block content %}
+<div class="calendar">
+    <div class="month-week">
+        <h1>December</h1>
+        <div class="m-w">
+            <span>Month</span>
+            <span>Week</span>
+        </div>
+    </div>
+    <div class="weeks">
+        <span>Sun</span>
+        <span>Mon</span>
+        <span>Tue</span>
+        <span>Wed</span>
+        <span>Thu</span>
+        <span>Fri</span>
+        <span>Sat</span>
+    </div>
+    <div class="days">
+        <span  class="next-month"></span>
+        <span  class="next-month"></span>
+        <span  class="next-month"></span>
+        {% for task in taskNo %}
+        {% if task == '1st' %}<span ><a href="{% url 'list' task %}">1</a></span>{% endif %}
+        {% endfor %}
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+
+    </div>
+    <div class="days">
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        {% for task in taskNo %}
+        {% if task == '10th' %}<span ><a href="{% url 'list' task %}">10</a></span>{% endif %}
+        {% endfor %}
+        <span>11</span>
+
+    </div>
+    <div class="days">
+        <span>12</span>
+        <span>13</span>
+        <span>14</span>
+        {% for task in taskNo %}
+        {% if task == '15th' %}<span ><a href="{% url 'list' task %}">15</a></span>{% endif %}
+        {% endfor %}
+        <span>16</span>
+        <span>17</span>
+        <span>18</span>
+
+    </div>
+    <div class="days">
+        <span>19</span>
+         {% for task in taskNo %}
+        {% if task == '20th' %}<span ><a href="{% url 'list' task %}">20</a></span>{% endif %}
+        {% endfor %}
+        <span>21</span>
+        <span>22</span>
+        <span>23</span>
+        <span>24</span>
+        {% for task in taskNo %}
+        {% if task == '25th' %}<span ><a href="{% url 'list' task %}">25</a></span>{% endif %}
+        {% endfor %}
+
+    </div>
+    <div class="days">
+        <span>26</span>
+        <span>27</span>
+        <span>28</span>
+        <span>29</span>
+        {% for task in taskNo %}
+        {% if task == '30th' %}<span ><a href="{% url 'list' task %}">30</a></span>{% endif %}
+        {% endfor %}
+        <span>31</span>
+        <span class="next-month">1</span>
+    </div>
+</div>
+<div class="list">
+    <h3>HTML,CSS Zero to Hero in 1 month</h3>
+<ul>
+
+    <li>Days with <span>color</span> have task lists.</li>
+    <li>Click colored days to know what to do.</li>
+    <li>Other days are <span>pratical</span> days on your own.</li>
+    <li>Make sure you complete all of your daily task.</li>
+</ul>
+</div>
+
+{% endblock content %}
